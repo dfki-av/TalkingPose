@@ -179,6 +179,11 @@
     <figure class="image">
       <img src="./static/images/pipeline.png"
            alt="TalkingPose model pipeline; Human Animation models with GPU memory equal image diffusion model">
+      <figcaption class="has-text-centered is-size-6" style="margin-top: 0.75rem;">
+        <strong>TalkingPose Pipeline.</strong>
+        <strong>Training:</strong> Appearance Encoder (CLIP + ReferenceNet) extracts source appearance features, while the Motion Encoder provides motion cues to the U-Net.
+        <strong>Inference:</strong> A single RGB source image and a driving-pose condition are used within DDIM sampling to predict a latent representation, which is refined through a feedback loop with proportional gain (&beta;).
+      </figcaption>
     </figure>
   </div>
 </section>
@@ -215,23 +220,11 @@
 </section>
 
 <!-- =========================
-     Comparison Section (placeholder)
-     ========================= -->
-<section class="section" id="comparison">
-  <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered">Comparison</h2>
-    <div class="content has-text-centered">
-      <p>Comparison videos will be added here.</p>
-    </div>
-  </div>
-</section>
-
-<!-- =========================
      Additional Results (PNG images)
      ========================= -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered">Additional Results</h2>
+    <h2 class="title is-4 has-text-centered">TJE and PSNR vs Model Complexity</h2>
     <div class="columns is-vcentered">
       <div class="column has-text-centered">
         <figure class="image">
@@ -263,6 +256,20 @@
   journal   = {To appear},
   year      = {2025},
 }</code></pre>
+  </div>
+</section>
+
+<!-- =========================
+     Acknowledgements
+     ========================= -->
+<section class="section" id="acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-4">Acknowledgements</h2>
+    <p>
+      This work has been partially funded by the EU projects
+      CORTEX<sup>2</sup> (GA: Nr 101070192) and
+      LUMINOUS (GA: Nr 101135724).
+    </p>
   </div>
 </section>
 
