@@ -39,6 +39,20 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <!-- Small custom styles for TLDR -->
+  <style>
+    .tldr-text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+    }
+    .tldr-highlight {
+      padding: 0 0.15em;
+      border-radius: 0.25em;
+      background: rgba(255, 215, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -101,6 +115,28 @@
                   <span>Download PDF</span>
                 </a>
               </span>
+
+              <!-- Code link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
+                  <span class="icon">
+                    <i class="fas fa-code"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Dataset link -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
             </div>
           </div>
 
@@ -121,7 +157,10 @@
         Your browser does not support the video tag.
       </video>
       <p class="has-text-centered" style="margin-top: 1rem;">
-        <strong>TLDR:</strong> Diffusion-based human face and gesture animation, with GPU memory requirements comparable to image diffusion models.
+        <span class="tldr-text">
+          <strong>TLDR:</strong> Diffusion-based human face and gesture animation, with GPU memory requirements comparable to
+          <span class="tldr-highlight">image diffusion models</span>.
+        </span>
       </p>
     </div>
   </div>
@@ -167,20 +206,21 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-4 has-text-centered">Effectiveness of Closed-loop Control Mechanism</h2>
-    <div class="columns is-centered">
-      <div class="column">
-        <video controls muted playsinline width="100%">
-          <source src="./static/videos/tje1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="column">
-        <video controls muted playsinline width="100%">
-          <source src="./static/videos/tje2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+
+    <div class="block" style="margin-top: 1.5rem;">
+      <video controls autoplay muted loop playsinline width="100%">
+        <source src="./static/videos/tje1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
+
+    <div class="block" style="margin-top: 1.5rem;">
+      <video controls autoplay muted loop playsinline width="100%">
+        <source src="./static/videos/tje2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
   </div>
 </section>
 
