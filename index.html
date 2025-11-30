@@ -130,21 +130,24 @@
 </section>
 
 <!-- =========================
-     Teaser video
+     Teaser + TLDR
      ========================= -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body has-text-centered">
-      <video id="teaser" autoplay muted loop playsinline width="100%">
-        <source src="./static/videos/teaser.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p class="has-text-centered" style="margin-top: 1rem;">
+
+      <p class="has-text-centered" style="margin-bottom: 1rem;">
         <span class="tldr-text">
           <strong>TLDR:</strong> Diffusion-based human face and gesture animation, with GPU memory requirements comparable to
           <span class="tldr-highlight">image diffusion models</span>.
         </span>
       </p>
+
+      <video id="teaser" autoplay muted loop playsinline width="100%">
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
     </div>
   </div>
 </section>
@@ -188,16 +191,16 @@
     <h2 class="title is-4 has-text-centered">Effectiveness of Closed-loop Control Mechanism</h2>
 
     <div class="block" style="margin-top: 1.5rem;">
-      <!-- Video containers -->
+      <!-- Video containers using previous styling (full width, controls) -->
       <div id="tje1-container">
-        <video id="tje1-video" autoplay muted loop playsinline width="100%">
+        <video id="tje1-video" controls autoplay muted loop playsinline width="100%">
           <source src="./static/videos/tje1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
 
       <div id="tje2-container" style="display: none;">
-        <video id="tje2-video" autoplay muted loop playsinline width="100%">
+        <video id="tje2-video" controls autoplay muted loop playsinline width="100%">
           <source src="./static/videos/tje2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -232,13 +235,13 @@
     <div class="columns is-vcentered">
       <div class="column has-text-centered">
         <figure class="image">
-          <img src="./static/images/tje_param.png"
+          <img src="./static/images/tje_param.jpg"
                alt="Parameter analysis for tje metric">
         </figure>
       </div>
       <div class="column has-text-centered">
         <figure class="image">
-          <img src="./static/images/PSNR_param.png"
+          <img src="./static/images/PSNR_param.jpg"
                alt="PSNR parameter analysis">
         </figure>
       </div>
@@ -303,7 +306,7 @@
     var prevBtn = document.getElementById('tje-prev');
     var nextBtn = document.getElementById('tje-next');
 
-    if (!tje1Container || !tje2Container) {
+    if (!tje1Container || !tje2Container || !prevBtn || !nextBtn) {
       return;
     }
 
