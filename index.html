@@ -104,44 +104,6 @@
             </div>
           </div>
 
-          <!-- =========================
-               Pipeline Figure
-               ========================= -->
-          <div class="section" style="padding-top: 2rem;">
-            <div class="container is-max-desktop">
-              <h2 class="title is-4">Model Pipeline</h2>
-              <figure class="image">
-                <img src="./static/images/pipeline.png"
-                     alt="TalkingPose model pipeline; Human Animation models with GPU memory equal image diffusion model">
-              </figure>
-            </div>
-          </div>
-          <!-- /Pipeline Figure -->
-
-          <!-- =========================
-               Closed-loop control videos
-               ========================= -->
-          <div class="section" style="padding-top: 1rem;">
-            <div class="container is-max-desktop">
-              <h2 class="title is-4">Effect of Closed-loop Control Mechanism</h2>
-              <div class="columns is-centered">
-                <div class="column">
-                  <video controls muted playsinline width="100%">
-                    <source src="./static/videos/tje1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div class="column">
-                  <video controls muted playsinline width="100%">
-                    <source src="./static/videos/tje2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /Closed-loop control videos -->
-
         </div>
       </div>
     </div>
@@ -149,7 +111,7 @@
 </section>
 
 <!-- =========================
-     Teaser video
+     Teaser video (right after title/affiliations)
      ========================= -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -158,13 +120,16 @@
         <source src="./static/videos/teaser.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-        Teaser for <strong>TalkingPose</strong>: long-form, temporally consistent face and gesture animation.
-      </h2>
+      <p class="has-text-centered" style="margin-top: 1rem;">
+        <strong>TLDR:</strong> Diffusion-based human face and gesture animation, with GPU memory requirements comparable to image diffusion models.
+      </p>
     </div>
   </div>
 </section>
 
+<!-- =========================
+     Abstract
+     ========================= -->
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -183,6 +148,57 @@
   </div>
 </section>
 
+<!-- =========================
+     Model Pipeline
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Model Pipeline</h2>
+    <figure class="image">
+      <img src="./static/images/pipeline.png"
+           alt="TalkingPose model pipeline; Human Animation models with GPU memory equal image diffusion model">
+    </figure>
+  </div>
+</section>
+
+<!-- =========================
+     Effectiveness of Closed-loop Control Mechanism
+     ========================= -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Effectiveness of Closed-loop Control Mechanism</h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <video controls muted playsinline width="100%">
+          <source src="./static/videos/tje1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="column">
+        <video controls muted playsinline width="100%">
+          <source src="./static/videos/tje2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     Comparison Section (placeholder)
+     ========================= -->
+<section class="section" id="comparison">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Comparison</h2>
+    <div class="content has-text-centered">
+      <p>Comparison videos will be added here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     BibTeX
+     ========================= -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
