@@ -58,32 +58,6 @@
           <i class="fas fa-home"></i>
         </span>
       </a>
-
-      <!--
-      ============================================================
-      Original Nerfies "More Research" dropdown (commented out).
-      Keep this commented unless you want to link other projects.
-      ============================================================
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-      -->
     </div>
   </div>
 </nav>
@@ -127,52 +101,6 @@
                   <span>Download PDF</span>
                 </a>
               </span>
-
-              <!--
-              ============================================================
-              Optional links (arXiv, Code, Video, Data) – commented out.
-              Uncomment and update URLs when available.
-              ============================================================
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/XXXX.XXXXX"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="https://youtube.com/your_talkingpose_video"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="https://github.com/yourusername/talkingpose"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="https://your-dataset-link"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                </a>
-              </span>
-              -->
             </div>
           </div>
 
@@ -184,11 +112,35 @@
               <h2 class="title is-4">Model Pipeline</h2>
               <figure class="image">
                 <img src="./static/images/pipeline.png"
-                     alt="TalkingPose model pipeline">
+                     alt="TalkingPose model pipeline; Human Animation models with GPU memory equal image diffusion model">
               </figure>
             </div>
           </div>
           <!-- /Pipeline Figure -->
+
+          <!-- =========================
+               Closed-loop control videos
+               ========================= -->
+          <div class="section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+              <h2 class="title is-4">Effect of Closed-loop Control Mechanism</h2>
+              <div class="columns is-centered">
+                <div class="column">
+                  <video controls muted playsinline width="100%">
+                    <source src="./static/videos/tje1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="column">
+                  <video controls muted playsinline width="100%">
+                    <source src="./static/videos/tje2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Closed-loop control videos -->
 
         </div>
       </div>
@@ -196,41 +148,22 @@
   </div>
 </section>
 
-<!--
-============================================================
-Original Nerfies teaser section (video + subtitle) - commented.
-Re-enable when you have a teaser video for TalkingPose.
-============================================================
+<!-- =========================
+     Teaser video
+     ========================= -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+    <div class="hero-body has-text-centered">
+      <video id="teaser" autoplay muted loop playsinline width="100%">
         <source src="./static/videos/teaser.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint portraits.
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        Teaser for <strong>TalkingPose</strong>: long-form, temporally consistent face and gesture animation.
       </h2>
     </div>
   </div>
 </section>
--->
-
-<!--
-============================================================
-Original Nerfies result carousel (multiple videos) - commented.
-Uncomment and adapt when you have demo videos for TalkingPose.
-============================================================
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        ...
-      </div>
-    </div>
-  </div>
-</section>
--->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -247,106 +180,13 @@ Uncomment and adapt when you have demo videos for TalkingPose.
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!--
-    ============================================================
-    Paper video – commented out until you have a public video.
-    ============================================================
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-    -->
   </div>
 </section>
-
-<!--
-============================================================
-Original Nerfies sections (Visual Effects, Matting, Animation,
-Related Links) – commented as they are project-specific.
-You can reuse the layout by adapting the text and media.
-============================================================
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>Using <i>nerfies</i> you can create fun visual effects...</p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>As a byproduct of our method, we can also solve the matting problem...</p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>We can also animate the scene by interpolating the deformation latent codes...</p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          ...
-        </div>
-
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>Using Nerfies, you can re-render a video from a novel viewpoint...</p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video" controls muted preload playsinline width="75%">
-            <source src="./static/videos/replay.mp4" type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-        <div class="content has-text-justified">
-          <p>There's a lot of excellent work that was introduced around the same time...</p>
-          ...
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
--->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
 
-    <!--
-    Fill in the appropriate fields once the publication venue is finalized.
-    Example template:
-    -->
     <pre><code>@article{javanmardi2025talkingpose,
   author    = {Javanmardi, Alireza and Jaiswal, Pragati and Habtegebrial, Tewodros Amberbir
                and Millerdurai, Christen and Wang, Shaoxiang and Pagani, Alain and Stricker, Didier},
@@ -365,13 +205,6 @@ You can reuse the layout by adapting the text and media.
          href="./static/papers/TalkingPose.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-
-      <!--
-      Optional GitHub icon – update link or keep commented.
-      <a class="icon-link" href="https://github.com/yourusername/talkingpose" class="external-link">
-        <i class="fab fa-github"></i>
-      </a>
-      -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
