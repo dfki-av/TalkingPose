@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TalkingPose: Efficient Face and Gesture Animation with a feedback-guided diffusion model for long-form, temporally consistent human upper-body animation.">
+  <meta name="TLDR:" content=" Diffusion-based human face and gesture animation, with GPU memory requirements comparable to image diffusion models.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalkingPose: Efficient Face and Gesture Animation with Feedback-guided Diffusion Model</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .tldr-text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-family: "Google Sans", "Noto Sans", sans-serif;
+    }
+    .tldr-highlight {
+      padding: 0 0.15em;
+      border-radius: 0.25em;
+      background: rgba(255, 215, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            TalkingPose: Efficient Face and Gesture Animation with Feedback-guided Diffusion Model
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Alireza Javanmardi<sup>1</sup>,</span>
+            <span class="author-block">Pragati Jaiswal<sup>1,2</sup>,</span>
+            <span class="author-block">Tewodros Amberbir Habtegebrial<sup>2</sup>,</span>
+            <span class="author-block">Christen Millerdurai<sup>1</sup>,</span>
+            <span class="author-block">Shaoxiang Wang<sup>1,2</sup>,</span>
+            <span class="author-block">Alain Pagani<sup>1</sup>,</span>
+            <span class="author-block">Didier Stricker<sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>German Research Center for Artificial Intelligence (DFKI)</span>
+            <span class="author-block"><sup>2</sup>RPTU Kaiserslautern-Landau</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <span class="link-block">
+                <a href="./static/papers/TalkingPose.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Download PDF</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-code"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <video id="teaser" autoplay muted loop playsinline width="100%">
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+      </video>
+
+      <p style="margin-top: 1rem;">
+        <span class="tldr-text">
+          <strong>TLDR:</strong> Diffusion-based human face and gesture animation, with GPU memory requirements comparable to
+          <span class="tldr-highlight">image diffusion models</span>.
+        </span>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- unchanged abstract text -->
+          <p><strong>Keywords:</strong> Face and Pose reenactment, Human Upper-body Animation, Diffusion Models</p>
+          <p>Recent advancements in diffusion models ... (same as before)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Model Pipeline</h2>
+    <figure class="image">
+      <img src="./static/images/pipeline.png">
+    </figure>
+  </div>
+</section>
+
+<!-- ======================================
+     CAROUSEL FOR tje VIDEOS
+====================================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">
+      Effectiveness of Closed-loop Control Mechanism
+    </h2>
+
+    <div id="tje-carousel" class="carousel">
+      <div class="item-1">
+        <video autoplay muted loop playsinline width="100%">
+          <source src="./static/videos/tje1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="item-2">
+        <video autoplay muted loop playsinline width="100%">
+          <source src="./static/videos/tje2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  bulmaCarousel.attach('#tje-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    autoplay: false
+  });
+</script>
+
+<!-- ======================================
+     TWO PDFs SECTION
+====================================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Additional Results</h2>
+
+    <div class="columns">
+      <div class="column has-text-centered">
+        <embed src="./static/images/tje_param.pdf" width="100%" height="500px" type="application/pdf">
+      </div>
+
+      <div class="column has-text-centered">
+        <embed src="./static/images/PSNR_param.pdf" width="100%" height="500px" type="application/pdf">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================
+     BIBTEX
+====================================== -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+
+    <pre><code>@article{javanmardi2025talkingpose,
+  author={...},
+  title={...},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+
+</body>
+</html>
