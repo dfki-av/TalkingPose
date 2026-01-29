@@ -1,0 +1,13 @@
+denoising_unet_path: ckpt_non/denoising_unet.pth
+image_encoder_path: pretrained_weights/image_encoder
+inference_config: configs/inference/inference_v2.yaml
+motion_module_path: ''
+pose_guider_path: ckpt_non/pose_guider.pth
+pretrained_base_model_path: pretrained_weights/stable-diffusion-v1-5
+pretrained_vae_path: pretrained_weights/sd-vae-ft-mse
+reference_unet_path: ckpt_non/reference_unet.pth
+reference_path: assets/samples/long_vid
+pose_path: assets/samples/long_vid_dwpose
+output_dir: sample_self_animation_long
+weight_dtype: fp16
+clc_gain: 0.05
