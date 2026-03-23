@@ -135,6 +135,7 @@ python tools/tje_error.py \
 This repository builds mainly upon and is inspired by the following works:
 - Moore-AnimateAnyone: https://github.com/MooreThreads/Moore-AnimateAnyone/tree/master
 - DWPose: https://github.com/IDEA-Research/DWPose
+  
 This work has been partially supported by the EU projects CORTEX2 (GA No. 101070192) and LUMINOUS (GA No. 101135724).
 
 ---
@@ -144,11 +145,12 @@ This work has been partially supported by the EU projects CORTEX2 (GA No. 101070
 If you find this work useful, please cite:
 
 ```bibtex
-@article{javanmardi2025talkingpose,
+@inproceedings{javanmardi2026talkingpose,
   title={TalkingPose: Efficient Face and Gesture Animation with Feedback-guided Diffusion Model},
   author={Javanmardi, Alireza and Jaiswal, Pragati and Habtegebrial, Tewodros Amberbir and Millerdurai, Christen and Wang, Shaoxiang and Pagani, Alain and Stricker, Didier},
-  journal={arXiv preprint arXiv:2512.00909},
-  year={2025}
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={3098--3108},
+  year={2026}
 }
 ```
 
